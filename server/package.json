@@ -1,0 +1,26 @@
+{
+  "name": "questionari",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/Damix48/questionari.git",
+  "author": "Damiano Zanardo <damiano.zanardo@gmail.com>",
+  "license": "GPL-3.0",
+  "private": true,
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "lint": "eslint src/"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "nodemon": "^2.0.12"
+  }
+}

@@ -1,0 +1,91 @@
+[
+  {
+    "question": "Cosa è la mela?",
+    "documents": [
+      "La mela è il falso frutto del melo, infatti, il vero frutto è il @torsolo.",
+      "è un falso frutto, il vero frutto è il @torsolo",
+      "è un falso frutto, @torsolo"
+    ],
+    "entities": [
+      {
+        "name": "torsolo",
+        "data": [
+          "torsolo"
+        ],
+        "weight": 0.5
+      }
+    ],
+    "help": [
+      "Sai quale è il frutto del melo?"
+    ]
+  },
+  {
+    "question": "Boh",
+    "documents": [
+      "sono andato al @mare @settimana fa",
+      "@settimana fa ho fatto una vacanza al @mare"
+    ],
+    "entities": [
+      {
+        "name": "settimana",
+        "data": [
+          "settimana",
+          "sette giorni"
+        ],
+        "weight": 0.25
+      },
+      {
+        "name": "mare",
+        "data": [
+          "mare"
+        ],
+        "weight": 0.75
+      }
+    ],
+    "factor": 0.5
+  },
+  {
+    "question": "Quale è una tipica caratteristica della martora?",
+    "documents": [
+      "mangia @frutta",
+      "si ciba di @frutta"
+    ],
+    "entities": [
+      {
+        "name": "frutta",
+        "data": [
+          "frutta",
+          "frutti"
+        ],
+        "weight": 0.75
+      }
+    ],
+    "factor": 0.5
+  },
+  {
+    "question": "Se avessi dei mesi senza obblighi o vincoli finanziari, cosa faresti con il tempo a disposizione?",
+    "documents": [
+      "Mi piacerebbe sfruttare per concentrarmi sulla mia formazione, garantendo maggior successo alla mia carriera per l’organizzazione per cui @lavoro.",
+      "vorrei imparare cose nuove che potrebbero servirmi nel @lavoro",
+      "vorrei apprendere nuove conoscenze in grado di risaltare la mia persona in @lavoro"
+    ],
+    "entities": [
+      {
+        "name": "lavoro",
+        "data": [
+          "lavoro",
+          "vita lavorativa",
+          "lavorativa",
+          "azienda",
+          "organizzazione",
+          "carriera"
+        ]
+      }
+    ],
+    "help": [
+      "Dimmi di più",
+      "Vorresti fare qualcosa che ti servisse per il lavoro?"
+    ],
+    "factor": 0.5
+  }
+]

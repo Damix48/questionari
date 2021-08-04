@@ -1,0 +1,5 @@
+{
+  "port": 1337,
+  "origin": "http://localhost:3000",
+  "data_path": "server/data/questions.json"
+}
