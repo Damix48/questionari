@@ -7,9 +7,9 @@ router.get('/all', async (req, res) => {
   res.json(QuestionManager.getAllQuestions());
 });
 
-router.get('/answer', async (req, res) => {
+router.post('/answer', async (req, res) => {
   const { question, answer } = req.body;
-  res.json({ score: await QuestionManager.evaluateAnswer(question, answer) });
+  res.json(await QuestionManager.evaluateAnswer(question, answer));
 });
 
 module.exports = router;

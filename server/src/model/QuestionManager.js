@@ -24,7 +24,16 @@ class _QuestionManager {
   async evaluateAnswer(_question, _answer) {
     const question = this.questions.find((q) => q.question === _question);
 
-    return question.evaluate(_answer);
+    const result = await question.evaluate(_answer);
+
+    if (result >= 0.3 && result < 0.5) {
+      return {
+        help: question.getHelp()?.replace('$', _answer) || 'Prova a dirmi di più',
+        score: result,
+      };
+    }
+
+    return { score: result };
   }
 }
 

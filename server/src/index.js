@@ -21,10 +21,14 @@ app.use(cors({
   origin,
 }));
 
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.listen(port || 1337, () => {
   console.log(`Listening at http://localhost:${port}`);
 });
+
+app.use(express.static(`${__dirname}/../../client/build`));
+app.get('/', (req, res) => { res.sendFile(`${__dirname}/../../client/build/index.html`); });
 
 app.use('/api/question', question);

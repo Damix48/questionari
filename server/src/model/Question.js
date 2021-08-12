@@ -87,6 +87,10 @@ class Question {
     const num = score > 0.7 ? score * entityFactor : score;
     return floorDecimal(num, 3) || 0;
   }
+
+  getHelp() {
+    return this.help[(Math.floor(Math.random() * this.help.length))] || 'Dimmi di più';
+  }
 }
 
 module.exports = { Question };
