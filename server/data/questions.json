@@ -4,7 +4,8 @@
     "documents": [
       "La mela è il falso frutto del melo, infatti, il vero frutto è il @torsolo.",
       "è un falso frutto, il vero frutto è il @torsolo",
-      "è un falso frutto, @torsolo"
+      "è un falso frutto, @torsolo",
+      "è un falso frutto, infatti il vero frutto del melo è il @torsolo"
     ],
     "entities": [
       {
@@ -15,6 +16,13 @@
         "weight": 0.5
       }
     ],
+    "levels": {},
+    "stats": {
+      "total": 4,
+      "correct": 1,
+      "incorrect": 3,
+      "quality": "Too little data"
+    },
     "help": [
       "Sai quale è il frutto del melo?"
     ]
@@ -23,7 +31,8 @@
     "question": "Boh",
     "documents": [
       "sono andato al @mare @settimana fa",
-      "@settimana fa ho fatto una vacanza al @mare"
+      "@settimana fa ho fatto una vacanza al @mare",
+      "una @settimana fa sono stato in vacanza al @mare"
     ],
     "entities": [
       {
@@ -42,13 +51,22 @@
         "weight": 0.75
       }
     ],
-    "factor": 0.5
+    "levels": {},
+    "stats": {
+      "total": 5,
+      "correct": 1,
+      "incorrect": 4,
+      "quality": "Too little data"
+    },
+    "help": null
   },
   {
     "question": "Quale è una tipica caratteristica della martora?",
     "documents": [
       "mangia @frutta",
-      "si ciba di @frutta"
+      "si ciba di @frutta",
+      "mangia la @frutta",
+      "che mangia i @frutta"
     ],
     "entities": [
       {
@@ -60,7 +78,14 @@
         "weight": 0.75
       }
     ],
-    "factor": 0.5
+    "levels": {},
+    "stats": {
+      "total": 5,
+      "correct": 2,
+      "incorrect": 3,
+      "quality": "Too little data"
+    },
+    "help": null
   },
   {
     "question": "Se avessi dei mesi senza obblighi o vincoli finanziari, cosa faresti con il tempo a disposizione?",
@@ -82,10 +107,25 @@
         ]
       }
     ],
+    "levels": {
+      "L3": [
+        "vorrei imparare nuove conoscenze utili",
+        "vorrei imparare nuove conoscenze"
+      ],
+      "L1": [
+        "vorrei imparare nuove conoscenze utili per il mio futuro lavorativo",
+        "mi piacerebbe studiare per apprendere nuove conoscenze utili per la mia formazione @lavoro"
+      ]
+    },
+    "stats": {
+      "total": 5,
+      "correct": 2,
+      "incorrect": 3,
+      "quality": "Too little data"
+    },
     "help": [
       "Dimmi di più",
       "Vorresti fare qualcosa che ti servisse per il lavoro?"
-    ],
-    "factor": 0.5
+    ]
   }
 ]

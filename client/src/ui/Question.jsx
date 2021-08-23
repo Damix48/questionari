@@ -9,9 +9,15 @@ const QUESTION = styled.h2`
 
   margin: 0em 1rem 1rem 1rem;
 
-
+  @keyframes color {
+    from {color: #111;}
+    to {color: #999;}
+  }
   &::before {
-    content: "> ";
+    content: ${(props) => (props.small ? '""' : '"> "')};
+    font-weight: 900;
+    color: #111;
+    animation: color 1s linear infinite alternate;
   }
 `;
 

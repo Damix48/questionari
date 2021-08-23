@@ -30,10 +30,45 @@ class Question {
     });
   }
 
+  toJSON() {
+    return {
+      question: this.question,
+      documents: this.documents,
+      entities: this.entities,
+      levels: this.levels,
+      stats: this.stats,
+      help: this.help,
+    };
+  }
+
   async train() {
+    this.check();
     this.initNLP();
     this.createDataset();
     await this.nlp.train();
+  }
+
+  check() {
+    const response = {};
+    if (this.stats.quality < 0.5) {
+      response.quality = this.stats.quality;
+    }
+
+    response.update1 = this.update(this.levels.L1, this.documents);
+    response.update2 = this.update(this.levels.L2, this.levels.L1);
+    response.update3 = this.update(this.levels.L3, this.levels.L2);
+
+    return response;
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  update(from, to) {
+    if (from?.length > 3 * to?.length && to?.length > 2) {
+      const update = from.splice(Math.floor(Math.random() * from.length), 1);
+      to.push(update);
+      return `${update}`;
+    }
+    return null;
   }
 
   createDataset() {
@@ -76,8 +111,6 @@ class Question {
       }
     });
 
-    console.log(result);
-
     if (result.intent === 'corretto') {
       const score = result.classifications[0]?.score;
       const num = score > 0.7 ? score * entityFactor : score;
@@ -90,6 +123,40 @@ class Question {
 
   getHelp() {
     return this.help[(Math.floor(Math.random() * this.help.length))] || 'Dimmi di più';
+  }
+
+  async addDocument(_document, level) {
+    let document = _document.trim();
+
+    const _result = await this.nlp.process(document);
+
+    _result.entities.forEach((ent) => {
+      document = document.replaceAll(ent.sourceText, `@${ent.entity}`);
+      document = document.replaceAll('@@', '@');
+    });
+
+    if (level === 0) {
+      this.documents.push(document);
+    } else {
+      if (!this.levels[`L${level}`]) this.levels[`L${level}`] = [];
+      this.levels[`L${level}`].push(document);
+    }
+  }
+
+  addStat(isCorrect) {
+    this.stats.total += 1;
+
+    if (isCorrect) {
+      this.stats.correct += 1;
+    } else {
+      this.stats.incorrect += 1;
+    }
+
+    if (this.stats.total > 10) {
+      this.stats.quality = this.stats.correct / this.stats.total;
+    } else {
+      this.stats.quality = 'Too little data';
+    }
   }
 }
 
