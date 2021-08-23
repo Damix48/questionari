@@ -16,7 +16,7 @@ class _QuestionManager {
       const response = question.check();
       console.log(chalk.blue(`Domanda: '${question.question}'`));
       if (response.quality) {
-        console.log(chalk.red(`\tLa percentuali di risposte corrette è bassa (${response.quality}).`));
+        console.log(chalk.red(`\tLa percentuale di risposte corrette è bassa (${(response.quality * 100).toFixed(2)}%).`));
       }
       if (response.update1) {
         console.log(chalk.red(`\tLa frase ${response.update1} è stata spostata nei documenti (dal livello 1).`));
