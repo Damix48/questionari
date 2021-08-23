@@ -32,7 +32,8 @@
     "documents": [
       "sono andato al @mare @settimana fa",
       "@settimana fa ho fatto una vacanza al @mare",
-      "una @settimana fa sono stato in vacanza al @mare"
+      "una @settimana fa sono stato in vacanza al @mare",
+      "@settimana fa sono andato al @mare in vacanza"
     ],
     "entities": [
       {
@@ -51,12 +52,19 @@
         "weight": 0.75
       }
     ],
-    "levels": {},
+    "levels": {
+      "L1": [
+        "sono andato in vacanza al @mare",
+        "sono andato in vacanza al @mare per @settimana",
+        "sono andato in vacanza al @mare @settimana fa",
+        "@settimana fa sono andato al @mare in vacanza"
+      ]
+    },
     "stats": {
-      "total": 5,
-      "correct": 1,
-      "incorrect": 4,
-      "quality": "Too little data"
+      "total": 17,
+      "correct": 6,
+      "incorrect": 11,
+      "quality": 0.35294117647058826
     },
     "help": null
   },
@@ -118,9 +126,9 @@
       ]
     },
     "stats": {
-      "total": 5,
+      "total": 6,
       "correct": 2,
-      "incorrect": 3,
+      "incorrect": 4,
       "quality": "Too little data"
     },
     "help": [

@@ -102,6 +102,7 @@ class Question {
     let entityFactor = 1;
 
     const result = await this.nlp.process('it', this.documentProcessor.process(_answer).join(' '));
+    console.log(result);
     // const result = await this.nlp.process("it", answer);
 
     this.entities?.forEach((ent) => {
