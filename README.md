@@ -1,5 +1,14 @@
 # Questionari
 
+## Installazione
+1. Scaricare la repository.
+2. Spostarsi nella cartella `client`
+3. Generare i file per il client tramite il comando `yarn build`
+4. Spostarsi nella cartella `server`
+5. Avviare tramite il comando `yarn start`
+
+Il client può essere raggiunto all'indirizzo http://localhost:1337
+
 ## Server
 Nella cartella `server` è presente un server **nodejs** necessario per l'utilizzo della libreria **nlp.js**.
 Il server legge i dati dal file `quesitons.json` presente nella cartella `server/data`. Il file è composto da un array di oggetti che hanno la seguente struttura:
@@ -101,4 +110,9 @@ Il riconoscimento delle risposte avviene tramite l'utilizzo della libreria [`nlp
 
 La risposta viene **normalizzata** e vengono rimosse le **stopword** tramite `DocumentProcessor` presente in `server/src/core/utils.js`.
 Viene poi effettuta la vera analisi della risposta tramite la funzione `nlp.process()`. Il risultato della funzione viene poi pesato in base alla presenza/assenza delle entità presenti e del loro preso (si veda la struttura JSON della domanda).
+
+### Estensione `documents`
+Se una risposta data dall'utente viene valutata molto positivamente viene inserita direttamente come nuova frase in `documents`, altrimenti viene salvata in vari livelli su `levels`. Una frase può salire di livello o passare nei documents solo se nel livello ci sono 3 volte più frasi che nel livello successivo.
+
+`documents` può essere aggioranta anche manualmente.
 
