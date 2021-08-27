@@ -199,7 +199,7 @@ const App = () => {
             <Score hidden={!end}>
               <p>Quiz completato con un punteggio di:</p>
               <h2>
-                {questionsModel.reduce((sum, q) => sum + q.score, 0)}
+                {questionsModel.reduce((sum, q) => sum + q.score, 0).toFixed(2)}
                 /
                 {questionsModel.length}
               </h2>

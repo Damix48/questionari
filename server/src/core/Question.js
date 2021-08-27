@@ -121,7 +121,7 @@ class Question {
   }
 
   getHelp() {
-    return this.help[(Math.floor(Math.random() * this.help.length))] || 'Dimmi di più';
+    return this.help[(Math.floor(Math.random() * this.help?.length))] || 'Dimmi di più';
   }
 
   async addDocument(_document, level) {

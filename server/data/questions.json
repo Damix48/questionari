@@ -19,16 +19,7 @@
         ]
       }
     ],
-    "levels": {
-      "L3": [
-        "vorrei imparare nuove conoscenze utili",
-        "vorrei imparare nuove conoscenze"
-      ],
-      "L1": [
-        "vorrei imparare nuove conoscenze utili per il mio futuro lavorativo",
-        "mi piacerebbe studiare per apprendere nuove conoscenze utili per la mia formazione @lavoro"
-      ]
-    },
+    "levels": {},
     "stats": {
       "total": 0,
       "correct": 0,
@@ -48,11 +39,7 @@
       "Creando una lista di cose da completare durante la giornata è stato facile completare i task segnando quelli completati"
     ],
     "entities": [],
-    "levels": {
-      "L1": [
-        "ho creato una lista di cose da completare durante la giornata."
-      ]
-    },
+    "levels": {},
     "stats": {
       "total": 0,
       "correct": 0,
