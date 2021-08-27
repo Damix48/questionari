@@ -88,7 +88,6 @@ class Question {
 
       this.nlp.addDocument('it', doc, 'corretto');
       this.nlp.addDocument('it', docProcessed.join(' '), 'corretto');
-      // this.nlp.addDocument('it', `non ${docProcessed.join(' ')}`, 'sbagliato');
 
       if (docProcessed.length > 1) {
         docProcessed.forEach((token) => {
@@ -102,8 +101,7 @@ class Question {
     let entityFactor = 1;
 
     const result = await this.nlp.process('it', this.documentProcessor.process(_answer).join(' '));
-    console.log(result);
-    // const result = await this.nlp.process("it", answer);
+    // console.log(result);
 
     this.entities?.forEach((ent) => {
       const entity = result.entities.filter((resultEnt) => ent.name === resultEnt.entity);

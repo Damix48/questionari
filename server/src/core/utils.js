@@ -24,14 +24,6 @@ class DocumentProcessor {
     const withoutStopwords = this.stopwords.removeStopwords(tokenized);
 
     return withoutStopwords;
-
-    // Stemming word
-    // const stemmed = withoutStopwords.map((token) => {
-    //   if (token[0] === '@') return token;
-    //   return this.stemmer.stemWord(token);
-    // });
-
-    // return stemmed;
   }
 }
 
