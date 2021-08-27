@@ -1,141 +1,5 @@
 [
   {
-    "question": "Cosa è la mela?",
-    "documents": [
-      "La mela è il falso frutto del melo, infatti, il vero frutto è il @torsolo.",
-      "è un falso frutto, il vero frutto è il @torsolo",
-      "è un falso frutto, @torsolo",
-      "è un falso frutto, infatti il vero frutto del melo è il @torsolo",
-      "un falso frutto, credo sia il @torsolo",
-      "un falso frutto il @torsolo",
-      "un falso frutto, credo sia il @torsolo"
-    ],
-    "entities": [
-      {
-        "name": "torsolo",
-        "data": [
-          "torsolo"
-        ],
-        "weight": 0.5
-      }
-    ],
-    "levels": {
-      "L3": [
-        "un falso frutto",
-        "un falso frutto",
-        "un falso frutto",
-        "un falso frutto",
-        "un falso frutto",
-        "un falso frutto",
-        "un falso frutto",
-        "un falso frutto",
-        "un falso frutto",
-        "un falso frutto",
-        "un falso frutto, credo sia il melo",
-        "un falso frutto, credo siano i semini",
-        "un falso frutto, non lo so",
-        "un falso frutto, non lo so",
-        "un falso frutto, non lo so",
-        "un falso frutto, non lo so",
-        "un falso frutto, non lo so",
-        "un falso frutto, non lo so",
-        "un falso frutto",
-        "un falso frutto, penso siano i semini",
-        "un falso frutto, non ne ho idea",
-        "un falso frutto, non ne ho idea",
-        "un falso frutto, non ne ho idea",
-        "un falso frutto, non ne ho idea",
-        "un falso frutto",
-        "un falso frutto, penso siano i semini",
-        "un falso frutto, non ne ho idea",
-        "un falso frutto",
-        "un falso frutto",
-        "un falso frutto, i semini sono il vero frutto",
-        "un falso frutto, non lo so"
-      ]
-    },
-    "stats": {
-      "total": 38,
-      "correct": 4,
-      "incorrect": 34,
-      "quality": 0.10526315789473684
-    },
-    "help": [
-      "Sai quale è il frutto del melo?"
-    ]
-  },
-  {
-    "question": "Boh",
-    "documents": [
-      "sono andato al @mare @settimana fa",
-      "@settimana fa ho fatto una vacanza al @mare",
-      "una @settimana fa sono stato in vacanza al @mare",
-      "@settimana fa sono andato al @mare in vacanza"
-    ],
-    "entities": [
-      {
-        "name": "settimana",
-        "data": [
-          "settimana",
-          "sette giorni"
-        ],
-        "weight": 0.25
-      },
-      {
-        "name": "mare",
-        "data": [
-          "mare"
-        ],
-        "weight": 0.75
-      }
-    ],
-    "levels": {
-      "L1": [
-        "sono andato in vacanza al @mare",
-        "sono andato in vacanza al @mare per @settimana",
-        "sono andato in vacanza al @mare @settimana fa",
-        "@settimana fa sono andato al @mare in vacanza"
-      ]
-    },
-    "stats": {
-      "total": 23,
-      "correct": 6,
-      "incorrect": 17,
-      "quality": 0.2608695652173913
-    },
-    "help": null
-  },
-  {
-    "question": "Quale è una tipica caratteristica della martora?",
-    "documents": [
-      "mangia @frutta",
-      "si ciba di @frutta",
-      "mangia la @frutta",
-      "che mangia i @frutta",
-      "mangia i @frutta",
-      "mangia i @frutta",
-      "mangia i @frutta"
-    ],
-    "entities": [
-      {
-        "name": "frutta",
-        "data": [
-          "frutta",
-          "frutti"
-        ],
-        "weight": 0.75
-      }
-    ],
-    "levels": {},
-    "stats": {
-      "total": 13,
-      "correct": 5,
-      "incorrect": 8,
-      "quality": 0.38461538461538464
-    },
-    "help": null
-  },
-  {
     "question": "Se avessi dei mesi senza obblighi o vincoli finanziari, cosa faresti con il tempo a disposizione?",
     "documents": [
       "Mi piacerebbe sfruttare per concentrarmi sulla mia formazione, garantendo maggior successo alla mia carriera per l’organizzazione per cui @lavoro.",
@@ -166,14 +30,35 @@
       ]
     },
     "stats": {
-      "total": 12,
-      "correct": 2,
-      "incorrect": 10,
-      "quality": 0.16666666666666666
+      "total": 0,
+      "correct": 0,
+      "incorrect": 0,
+      "quality": "Too little data"
     },
     "help": [
       "Dimmi di più",
       "Vorresti fare qualcosa che ti servisse per il lavoro?"
     ]
+  },
+  {
+    "question": "Parlami di quando hai dovuto gestire piu responsabilita. Come hai organizzato il lavoro da svolgere?",
+    "documents": [
+      "Ho compilato una lista di cose da fare ogni giorno. Ogni cosa completata veniva cancellata dalla lista.",
+      "Ho creato una lista di cose da fare durante il giorno, segnavo le cose completate nella lista",
+      "Creando una lista di cose da completare durante la giornata è stato facile completare i task segnando quelli completati"
+    ],
+    "entities": [],
+    "levels": {
+      "L1": [
+        "ho creato una lista di cose da completare durante la giornata."
+      ]
+    },
+    "stats": {
+      "total": 0,
+      "correct": 0,
+      "incorrect": 0,
+      "quality": "Too little data"
+    },
+    "help": null
   }
 ]
