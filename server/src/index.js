@@ -3,15 +3,20 @@ const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
 const question = require('./api/question');
-const { port, origin, data_path: path } = require('./config.json');
+const user = require('./api/user');
+const {
+  port, origin, data_path: dataPath, user_path: userPath,
+} = require('./config.json');
 
 const startPath = `${__dirname}/../../`;
 
-const QuestionManager = require('./model/QuestionManager');
+const QuestionController = require('./core/QuestionController');
+const UserController = require('./core/UserController');
 
 const app = express();
 
-QuestionManager.init(startPath + path);
+QuestionController.init(startPath + dataPath);
+UserController.init(startPath + userPath);
 
 app.enable('trust proxy');
 
@@ -32,3 +37,4 @@ app.use(express.static(`${__dirname}/../../client/build`));
 app.get('/', (req, res) => { res.sendFile(`${__dirname}/../../client/build/index.html`); });
 
 app.use('/api/question', question);
+app.use('/api/user', user);

@@ -2,10 +2,12 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
+import { nanoid } from 'nanoid';
 import { Question, Answer, Button } from './ui';
 import QuestionModel from './model/question';
 
-import { getAllQuestions, postAnswer } from './API';
+import { getAllQuestions, postAnswer, postUser } from './API';
+import TextBox from './ui/TextBox';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -68,6 +70,15 @@ const Counter = styled.div`
   }
 `;
 
+const Form = styled.div`
+  margin-top: 2rem;
+
+
+  & input {
+    margin-bottom: 0.5rem;
+  }
+`;
+
 const App = () => {
   const [update, setUpdate] = useState(0); // integer state
   const [questions, setQuestions] = useState();
@@ -78,6 +89,10 @@ const App = () => {
   const [end, setEnd] = useState(false);
   const [current, setCurrent] = useState(0);
   const [total, setTotal] = useState(0);
+  const [id, setId] = useState();
+  const [name, setName] = useState();
+  const [surname, setSurname] = useState();
+  const [questionPage, setQuestionPage] = useState(false);
 
   const useForceUpdate = () => { setUpdate(update + 1); };
 
@@ -100,6 +115,7 @@ const App = () => {
   };
 
   useEffect(() => {
+    setId(nanoid());
     getQuestions();
   }, []);
 
@@ -120,19 +136,33 @@ const App = () => {
     setAnswer(e.target.value);
   };
 
+  const onNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const onSurnameChange = (e) => {
+    setSurname(e.target.value);
+  };
+
   const onSend = async () => {
-    const response = await postAnswer(question.question, answer);
+    const response = await postAnswer(id, question.question, answer);
     console.log(response);
 
     question.updateScore(response.score);
-    if (response.help) {
+    if (response.help && question.next !== 0) {
       question.addHelp(response.help);
+      question.next -= 1;
     } else {
       question.end();
       setNext(true);
     }
 
     useForceUpdate();
+  };
+
+  const onSendUser = async () => {
+    const response = await postUser(id, name, surname);
+    if (response.created === true) { setQuestionPage(true); }
   };
 
   const onNext = () => {
@@ -142,36 +172,52 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      <Counter>
-        <p>Domanda</p>
-        <h2>
-          {current}
-          {' '}
-          di
-          {' '}
-          {total}
-        </h2>
-        <div />
-      </Counter>
-      <Centered>
-        {!question ? <Question>Caricamento...</Question> : null}
-        {question?.text?.map((q, i) => (
-          <Question small={i !== question.text.length - 1}>{q}</Question>
-        ))}
-        <Answer value={answer} onChange={onAnswerChange} />
-        <ButtonGroup>
-          <Button onClick={onSend} disabled={next}>Invia</Button>
-          <Button onClick={onNext} hidden={!next}>Prossima</Button>
-        </ButtonGroup>
-        <Score hidden={!end}>
-          <p>Quiz completato con un punteggio di:</p>
-          <h2>
-            {questionsModel.reduce((sum, q) => sum + q.score, 0)}
-            /
-            {questionsModel.length}
-          </h2>
-        </Score>
-      </Centered>
+
+      {questionPage ? (
+        <>
+          <Counter>
+            <p>Domanda</p>
+            <h2>
+              {current}
+              {' '}
+              di
+              {' '}
+              {total}
+            </h2>
+            <div />
+          </Counter>
+          <Centered>
+            {!question ? <Question>Caricamento...</Question> : null}
+            {question?.text?.map((q, i) => (
+              <Question small={i !== question.text.length - 1}>{q}</Question>
+            ))}
+            <Answer value={answer} onChange={onAnswerChange} />
+            <ButtonGroup>
+              <Button onClick={onSend} disabled={next}>Invia</Button>
+              <Button onClick={onNext} hidden={!next}>Prossima</Button>
+            </ButtonGroup>
+            <Score hidden={!end}>
+              <p>Quiz completato con un punteggio di:</p>
+              <h2>
+                {questionsModel.reduce((sum, q) => sum + q.score, 0)}
+                /
+                {questionsModel.length}
+              </h2>
+            </Score>
+          </Centered>
+        </>
+      ) : (
+        <Form>
+          <Centered>
+            <Question>Nome e Cognome</Question>
+            <TextBox placeholder="Nome" text={name} onChange={onNameChange} />
+            <TextBox placeholder="Cognome" text={surname} onChange={onSurnameChange} />
+            <ButtonGroup>
+              <Button onClick={onSendUser}>Invia</Button>
+            </ButtonGroup>
+          </Centered>
+        </Form>
+      )}
     </>
   );
 };

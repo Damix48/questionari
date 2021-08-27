@@ -5,7 +5,10 @@
       "La mela è il falso frutto del melo, infatti, il vero frutto è il @torsolo.",
       "è un falso frutto, il vero frutto è il @torsolo",
       "è un falso frutto, @torsolo",
-      "è un falso frutto, infatti il vero frutto del melo è il @torsolo"
+      "è un falso frutto, infatti il vero frutto del melo è il @torsolo",
+      "un falso frutto, credo sia il @torsolo",
+      "un falso frutto il @torsolo",
+      "un falso frutto, credo sia il @torsolo"
     ],
     "entities": [
       {
@@ -16,12 +19,46 @@
         "weight": 0.5
       }
     ],
-    "levels": {},
+    "levels": {
+      "L3": [
+        "un falso frutto",
+        "un falso frutto",
+        "un falso frutto",
+        "un falso frutto",
+        "un falso frutto",
+        "un falso frutto",
+        "un falso frutto",
+        "un falso frutto",
+        "un falso frutto",
+        "un falso frutto",
+        "un falso frutto, credo sia il melo",
+        "un falso frutto, credo siano i semini",
+        "un falso frutto, non lo so",
+        "un falso frutto, non lo so",
+        "un falso frutto, non lo so",
+        "un falso frutto, non lo so",
+        "un falso frutto, non lo so",
+        "un falso frutto, non lo so",
+        "un falso frutto",
+        "un falso frutto, penso siano i semini",
+        "un falso frutto, non ne ho idea",
+        "un falso frutto, non ne ho idea",
+        "un falso frutto, non ne ho idea",
+        "un falso frutto, non ne ho idea",
+        "un falso frutto",
+        "un falso frutto, penso siano i semini",
+        "un falso frutto, non ne ho idea",
+        "un falso frutto",
+        "un falso frutto",
+        "un falso frutto, i semini sono il vero frutto",
+        "un falso frutto, non lo so"
+      ]
+    },
     "stats": {
-      "total": 4,
-      "correct": 1,
-      "incorrect": 3,
-      "quality": "Too little data"
+      "total": 38,
+      "correct": 4,
+      "incorrect": 34,
+      "quality": 0.10526315789473684
     },
     "help": [
       "Sai quale è il frutto del melo?"
@@ -61,10 +98,10 @@
       ]
     },
     "stats": {
-      "total": 17,
+      "total": 23,
       "correct": 6,
-      "incorrect": 11,
-      "quality": 0.35294117647058826
+      "incorrect": 17,
+      "quality": 0.2608695652173913
     },
     "help": null
   },
@@ -74,7 +111,10 @@
       "mangia @frutta",
       "si ciba di @frutta",
       "mangia la @frutta",
-      "che mangia i @frutta"
+      "che mangia i @frutta",
+      "mangia i @frutta",
+      "mangia i @frutta",
+      "mangia i @frutta"
     ],
     "entities": [
       {
@@ -88,10 +128,10 @@
     ],
     "levels": {},
     "stats": {
-      "total": 5,
-      "correct": 2,
-      "incorrect": 3,
-      "quality": "Too little data"
+      "total": 13,
+      "correct": 5,
+      "incorrect": 8,
+      "quality": 0.38461538461538464
     },
     "help": null
   },
@@ -126,10 +166,10 @@
       ]
     },
     "stats": {
-      "total": 6,
+      "total": 12,
       "correct": 2,
-      "incorrect": 4,
-      "quality": "Too little data"
+      "incorrect": 10,
+      "quality": 0.16666666666666666
     },
     "help": [
       "Dimmi di più",

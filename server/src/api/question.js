@@ -1,15 +1,18 @@
 const { Router } = require('express');
-const QuestionManager = require('../model/QuestionManager');
+const QuestionController = require('../core/QuestionController');
+const UserController = require('../core/UserController');
 
 const router = Router();
 
 router.get('/all', async (req, res) => {
-  res.json(QuestionManager.getAllQuestions());
+  res.json(QuestionController.getAllQuestions());
 });
 
 router.post('/answer', async (req, res) => {
-  const { question, answer } = req.body;
-  res.json(await QuestionManager.evaluateAnswer(question, answer));
+  const { id, question, answer } = req.body;
+  const response = await QuestionController.evaluateAnswer(question, answer);
+  UserController.addQuestion(id, question, answer, response);
+  res.json(response);
 });
 
 module.exports = router;

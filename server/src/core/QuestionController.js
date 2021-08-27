@@ -2,7 +2,7 @@ const fs = require('fs');
 const chalk = require('chalk');
 const { Question } = require('./Question');
 
-class _QuestionManager {
+class _QuestionController {
   init(path) {
     this.path = path || this.path;
 
@@ -81,6 +81,6 @@ class _QuestionManager {
   }
 }
 
-const QuestionManager = new _QuestionManager();
+const QuestionController = new _QuestionController();
 
-module.exports = QuestionManager;
+module.exports = QuestionController;
