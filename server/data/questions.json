@@ -27,7 +27,6 @@
       "quality": "Too little data"
     },
     "help": [
-      "Dimmi di più",
       "Vorresti fare qualcosa che ti servisse per il lavoro?"
     ]
   },
@@ -36,7 +35,8 @@
     "documents": [
       "Ho compilato una lista di cose da fare ogni giorno. Ogni cosa completata veniva cancellata dalla lista.",
       "Ho creato una lista di cose da fare durante il giorno, segnavo le cose completate nella lista",
-      "Creando una lista di cose da completare durante la giornata è stato facile completare i task segnando quelli completati"
+      "Creando una lista di cose da completare durante la giornata è stato facile completare i task segnando quelli completati",
+      "ho creato una lista di cose da fare durante il giorno e segnavo i task completati sempre sulla lista per capire le cose ancora da svolgere"
     ],
     "entities": [],
     "levels": {},
@@ -52,7 +52,7 @@
     "question": "Raccontami di quella volta in cui hai avuto a che fare con una persona difficile. Come hai gestito la situazione?",
     "documents": [
       "Ho scelto di mettere le mie differenze di opinione da parte e completare la mia parte, offrendo assistenza anche agli altri membri del gruppo.",
-      "Ho cercato di mettere da parte le differenze e di aiutare gli altri membri del mio gruppo di lavoro"
+      "Ho cercato di mettere da parte le diversità e di aiutare gli altri membri del mio gruppo di lavoro"
     ],
     "entities": [],
     "levels": {},

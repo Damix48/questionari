@@ -194,10 +194,10 @@ const App = () => {
             <Answer value={answer} onChange={onAnswerChange} />
             <ButtonGroup>
               <Button onClick={onSend} disabled={next}>Invia</Button>
-              <Button onClick={onNext} hidden={!next}>Prossima</Button>
+              <Button onClick={onNext} disabled={!next}>Prossima</Button>
             </ButtonGroup>
             <Score hidden={!end}>
-              <p>Quiz completato con un punteggio di:</p>
+              <h3>Quiz completato con un punteggio di:</h3>
               <h2>
                 {questionsModel.reduce((sum, q) => sum + q.score, 0).toFixed(2)}
                 /
@@ -209,6 +209,7 @@ const App = () => {
       ) : (
         <Form>
           <Centered>
+            <p>Questionario a domande con risposta aperta</p>
             <Question>Nome e Cognome</Question>
             <TextBox placeholder="Nome" text={name} onChange={onNameChange} />
             <TextBox placeholder="Cognome" text={surname} onChange={onSurnameChange} />
