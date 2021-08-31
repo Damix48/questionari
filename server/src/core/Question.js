@@ -146,9 +146,7 @@ class Question {
 
   async getHelp(_answer) {
     const result = await this.helpNlp.process('it', this.documentProcessor.process(_answer).join(' '));
-    console.log(result);
     return result.answer ? result.answer : 'Dimmi di più';
-    // ret this.help ? this.help[(Math.floor(Math.random() * this.help?.length))] : 'Dimmi di più';
   }
 
   async addDocument(_document, level) {
