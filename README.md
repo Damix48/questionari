@@ -32,7 +32,10 @@ Il server legge i dati dal file `quesitons.json` presente nella cartella `server
     "incorrect": 11,
     "quality": 0.35294117647058826
   },
-  "help": ["array di frasi", "che verranno pescate casualmente", "per aiutare nella risposta", "se il punteggio si trova nel range", "tra 0.5 e 0.3"]
+  "help": [{
+    "trigger": ["array di frasi", "o parole"],
+    "sentence": ["array di risposte triggerate", "da trigger"]
+  }]
 }
 ```
 - `question`: domanda da porre all'utente [Obbligatorio]
@@ -47,7 +50,9 @@ Il server legge i dati dal file `quesitons.json` presente nella cartella `server
   - `correct`: numero di risposte corrette date
   - `incorrect`: numero di risposte sbagliate date
   - `quality`: percentuale di risposte corrette
-- `help`: array di frasi che verranno pescate casualmente per aiutare nella risposta se il punteggio si trova nel range tra 0.5 e 0.3; si può utilizzare il simbolo `$` come placeholder per riscrivere la risposta data dall'utente
+- `help`: array che contiene le frasi di aiuto che verranno utilizzate se la domanda ottiene un punteggio tra 0.5 e 0.3
+  - `trigger`: array di frasi o parole che vengono utilizzate per innescare un help
+  - `sentence`: array di aiuti che verranno pescati casualmente
 
 Per aggiungere una nuova domanda da utilizzare sono obbligatorie le proprietà `question` e `documents`.
 
