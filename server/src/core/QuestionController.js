@@ -72,7 +72,7 @@ class _QuestionController {
 
     if (result >= 0.3 && result < 0.5) {
       return {
-        help: question.getHelp()?.replace('$', _answer) || 'Prova a dirmi di più',
+        help: (await question.getHelp(_answer))?.replace('$', _answer) || 'Prova a dirmi di più',
         score: result,
       };
     }

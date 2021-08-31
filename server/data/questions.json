@@ -27,7 +27,18 @@
       "quality": "Too little data"
     },
     "help": [
-      "Vorresti fare qualcosa che ti servisse per il lavoro?"
+      {
+        "trigger": [
+          "imparare",
+          "conoscere",
+          "conoscenza",
+          "studio"
+        ],
+        "sentence": [
+          "Per cosa ti saranno utili queste nuove conoscenze?",
+          "Perchè vorresti imparare cose nuove?"
+        ]
+      }
     ]
   },
   {

@@ -28,6 +28,17 @@ class Question {
       autoLoad: false,
       autoSave: false,
     });
+
+    this.helpNlp = new Nlp({
+      languages: [
+        'it',
+      ],
+      nlu: {
+        log: false,
+      },
+      autoLoad: false,
+      autoSave: false,
+    });
   }
 
   toJSON() {
@@ -46,6 +57,7 @@ class Question {
     this.initNLP();
     this.createDataset();
     await this.nlp.train();
+    await this.helpNlp.train();
   }
 
   check() {
@@ -74,6 +86,7 @@ class Question {
   createDataset() {
     this.addEntities();
     this.addDocuments();
+    this.addHelp();
   }
 
   addEntities() {
@@ -94,6 +107,17 @@ class Question {
           this.nlp.addDocument('it', `${token}`, 'sbagliato');
         });
       }
+    });
+  }
+
+  addHelp() {
+    this.help?.forEach((help, index) => {
+      help.trigger.forEach((trigger) => {
+        this.helpNlp.addDocument('it', trigger, `help-${index}`);
+      });
+      help.sentence.forEach((sentence) => {
+        this.helpNlp.addAnswer('it', `help-${index}`, sentence);
+      });
     });
   }
 
@@ -120,8 +144,11 @@ class Question {
     return floorDecimal(num, 3) || 0;
   }
 
-  getHelp() {
-    return this.help ? this.help[(Math.floor(Math.random() * this.help?.length))] : 'Dimmi di più';
+  async getHelp(_answer) {
+    const result = await this.helpNlp.process('it', this.documentProcessor.process(_answer).join(' '));
+    console.log(result);
+    return result.answer ? result.answer : 'Dimmi di più';
+    // ret this.help ? this.help[(Math.floor(Math.random() * this.help?.length))] : 'Dimmi di più';
   }
 
   async addDocument(_document, level) {
