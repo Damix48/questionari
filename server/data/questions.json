@@ -13,13 +13,19 @@
       {
         "intent": "vacanza",
         "sentences": [
-          "vorrei andare alle maldive"
+          "vorrei andare alle maldive",
+          "mi piacerebbe andare in vacanza al mare",
+          "vorrei rilassarmi andando in montagna o al mare",
+          "sarebbe bello sentire l'aria della montagna per qualche settimana",
+          "vorrei stare una settimana a new york"
         ]
       },
       {
         "intent": "divertimento",
         "sentences": [
-          "vorrei andare alle maldive"
+          "vorrei andare in discoteca ogni sera",
+          "andrei al cinema almeno una volta a settimana",
+          "mangio al giapponese tutti i giorni"
         ]
       }
     ],
@@ -38,9 +44,9 @@
     ],
     "levels": {},
     "stats": {
-      "total": 2,
+      "total": 0,
       "correct": 0,
-      "incorrect": 2,
+      "incorrect": 0,
       "quality": "Too little data"
     },
     "help": [
