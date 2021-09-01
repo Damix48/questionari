@@ -15,7 +15,9 @@ const UserController = require('./core/UserController');
 
 const app = express();
 
+// Inizializzazione controller Question
 QuestionController.init(startPath + dataPath);
+// Inizializzazione controller User
 UserController.init(startPath + userPath);
 
 app.enable('trust proxy');
@@ -33,8 +35,10 @@ app.listen(port || 1337, () => {
   console.log(`Listening at http://localhost:${port}`);
 });
 
+// WEBUI client
 app.use(express.static(`${__dirname}/../../client/build`));
 app.get('/', (req, res) => { res.sendFile(`${__dirname}/../../client/build/index.html`); });
 
+// API
 app.use('/api/question', question);
 app.use('/api/user', user);
