@@ -116,7 +116,7 @@ Il riconoscimento delle risposte avviene tramite l'utilizzo della libreria [`nlp
 La risposta viene **normalizzata** e vengono rimosse le **stopword** tramite `DocumentProcessor` presente in `server/src/core/utils.js`.
 Viene poi effettuta la vera analisi della risposta tramite la funzione `nlp.process()`. Il risultato della funzione viene poi pesato in base alla presenza/assenza delle entità presenti e del loro preso (si veda la struttura JSON della domanda).
 
-### Estensione `documents`
+### Estensione `documents` di una domanda
 Se una risposta data dall'utente viene valutata molto positivamente viene inserita direttamente come nuova frase in `documents`, altrimenti viene salvata in vari livelli su `levels`. Una frase può salire di livello o passare nei documents solo se nel livello ci sono 3 volte più frasi che nel livello successivo.
 
 `documents` può essere aggioranta anche manualmente.
