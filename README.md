@@ -44,7 +44,10 @@ Il server legge i dati dal file `quesitons.json` presente nella cartella `server
   - `name`: nome dell'entità che verrà sostituita con `@name` all'interno delle frasi salvate
   - `data`: array che contiene le parole riconosciute come entità
   - `weight`: peso tra 0 e 1 che l'entità assume nella valutazione della risposta (più alto più è più basso sarà il punteggio se manca nella risposta)
-- `levels`: insieme delle frasi salvate e divise per livelli di correttezza. `L1` è il livello con un punteggio più alto, `L2` punteggio medio (sempre sopra a 0.5 e quindi considerate corrette), `L3` punteggio tra 0.5 e 0.3, sono considerate errate ma vengono salvate ugualemente
+- `levels`: insieme delle frasi salvate e divise per livelli di correttezza
+  - `L1`: livello con un punteggio più alto, compreso tra 0.9 e 0.75 (considerata corretta)
+  - `L2`: punteggio medio, compreso tra 0.75 e 0.5 (considerata corretta)
+  - `L3`: punteggio basso, compreso tra 0.5 e 0.3 (considerata sbagliata ma viene salvata)
 - `stats`: statistiche della domanda
   - `total`: numero di risposte date
   - `correct`: numero di risposte corrette date
