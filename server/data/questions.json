@@ -91,10 +91,13 @@
   },
   {
     "question": "Raccontami di quella volta in cui hai avuto a che fare con una persona difficile. Come hai gestito la situazione?",
-    "documents": [
-      "Ho scelto di mettere le mie differenze di opinione da parte e completare la mia parte, offrendo assistenza anche agli altri membri del gruppo.",
-      "Ho cercato di mettere da parte le diversità e di aiutare gli altri membri del mio gruppo di lavoro"
-    ],
+    "documents": {
+      "intent": "corretto",
+      "sentences": [
+        "Ho scelto di mettere le mie differenze di opinione da parte e completare la mia parte, offrendo assistenza anche agli altri membri del gruppo.",
+        "Ho cercato di mettere da parte le diversità e di aiutare gli altri membri del mio gruppo di lavoro"
+      ]
+    },
     "entities": [],
     "levels": {},
     "stats": {
