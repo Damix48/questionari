@@ -115,8 +115,8 @@ class Question {
       help.trigger.forEach((trigger) => {
         this.helpNlp.addDocument('it', trigger, `help-${index}`);
       });
-      help.sentence.forEach((sentence) => {
-        this.helpNlp.addAnswer('it', `help-${index}`, sentence);
+      help.sentences.forEach((sentences) => {
+        this.helpNlp.addAnswer('it', `help-${index}`, sentences);
       });
     });
   }
