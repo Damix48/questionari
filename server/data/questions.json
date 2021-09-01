@@ -19,7 +19,12 @@
         ]
       }
     ],
-    "levels": {},
+    "levels": {
+      "L3": [
+        "vorrei imparare cose nuove",
+        "vorrei imparare cose nuove"
+      ]
+    },
     "stats": {
       "total": 0,
       "correct": 0,
@@ -29,7 +34,6 @@
     "help": [
       {
         "trigger": [
-          "imparare",
           "conoscere",
           "conoscenza",
           "studio"
@@ -37,6 +41,14 @@
         "sentence": [
           "Per cosa ti saranno utili queste nuove conoscenze?",
           "Perchè vorresti imparare cose nuove?"
+        ]
+      },
+      {
+        "trigger": [
+          "imparare cose nuove"
+        ],
+        "sentence": [
+          "Quali sono queste cose che vuoi imparare?"
         ]
       }
     ]
