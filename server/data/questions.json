@@ -2,9 +2,26 @@
   {
     "question": "Se avessi dei mesi senza obblighi o vincoli finanziari, cosa faresti con il tempo a disposizione?",
     "documents": [
-      "Mi piacerebbe sfruttare per concentrarmi sulla mia formazione, garantendo maggior successo alla mia carriera per l'organizzazione per cui @lavoro.",
-      "vorrei imparare cose nuove che potrebbero servirmi nel @lavoro",
-      "vorrei apprendere nuove conoscenze in grado di risaltare la mia persona in @lavoro"
+      {
+        "intent": "lavoro",
+        "sentences": [
+          "Mi piacerebbe sfruttare per concentrarmi sulla mia formazione, garantendo maggior successo alla mia carriera per l'organizzazione per cui @lavoro.",
+          "vorrei imparare cose nuove che potrebbero servirmi nel @lavoro",
+          "vorrei apprendere nuove conoscenze in grado di risaltare la mia persona in @lavoro"
+        ]
+      },
+      {
+        "intent": "vacanza",
+        "sentences": [
+          "vorrei andare alle maldive"
+        ]
+      },
+      {
+        "intent": "divertimento",
+        "sentences": [
+          "vorrei andare alle maldive"
+        ]
+      }
     ],
     "entities": [
       {
@@ -21,9 +38,9 @@
     ],
     "levels": {},
     "stats": {
-      "total": 0,
+      "total": 2,
       "correct": 0,
-      "incorrect": 0,
+      "incorrect": 2,
       "quality": "Too little data"
     },
     "help": [
@@ -34,7 +51,7 @@
           "conoscenze",
           "studio"
         ],
-        "sentence": [
+        "sentences": [
           "Per cosa ti saranno utili queste nuove conoscenze?",
           "Perchè vorresti apprendere nuove conoscenze?"
         ]
@@ -43,7 +60,7 @@
         "trigger": [
           "imparare cose"
         ],
-        "sentence": [
+        "sentences": [
           "Quali sono queste cose che vuoi imparare?",
           "Perchè vorresti imparare cose nuove?"
         ]
@@ -52,13 +69,16 @@
   },
   {
     "question": "Parlami di quando hai dovuto gestire piu responsabilita. Come hai organizzato il lavoro da svolgere?",
-    "documents": [
-      "Ho compilato una lista di cose da fare ogni giorno. Ogni cosa completata veniva cancellata dalla lista.",
-      "Ho creato una lista di cose da fare durante il giorno, segnavo le cose completate nella lista",
-      "Creando una lista di cose da completare durante la giornata è stato facile completare i task segnando quelli completati",
-      "ho creato una lista di cose da fare durante il giorno e segnavo i task completati sempre sulla lista per capire le cose ancora da svolgere",
-      "compilando una lista di cose da fare ogni giorno. Ogni compito completato veniva cancellato dalla lista."
-    ],
+    "documents": {
+      "intent": "corretto",
+      "sentences": [
+        "Ho compilato una lista di cose da fare ogni giorno. Ogni cosa completata veniva cancellata dalla lista.",
+        "Ho creato una lista di cose da fare durante il giorno, segnavo le cose completate nella lista",
+        "Creando una lista di cose da completare durante la giornata è stato facile completare i task segnando quelli completati",
+        "ho creato una lista di cose da fare durante il giorno e segnavo i task completati sempre sulla lista per capire le cose ancora da svolgere",
+        "compilando una lista di cose da fare ogni giorno. Ogni compito completato veniva cancellato dalla lista."
+      ]
+    },
     "entities": [],
     "levels": {},
     "stats": {
