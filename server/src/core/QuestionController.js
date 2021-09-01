@@ -59,17 +59,17 @@ class _QuestionController {
 
     const result = await question.evaluate(_answer);
 
-    if (result >= 0.9) {
-      await question.addDocument(_answer, 0);
+    if (result.score >= 0.9) {
+      await question.addDocument(_answer, 0, result.intent);
       question.addStat(true);
-    } else if (result >= 0.75) {
-      await question.addDocument(_answer, 1);
+    } else if (result.score >= 0.75) {
+      await question.addDocument(_answer, 1, result.intent);
       question.addStat(true);
-    } else if (result >= 0.5) {
-      await question.addDocument(_answer, 2);
+    } else if (result.score >= 0.5) {
+      await question.addDocument(_answer, 2, result.intent);
       question.addStat(true);
-    } else if (result >= 0.3) {
-      await question.addDocument(_answer, 3);
+    } else if (result.score >= 0.3) {
+      await question.addDocument(_answer, 3, result.intent);
       question.addStat(false);
     } else {
       question.addStat(false);
@@ -78,14 +78,15 @@ class _QuestionController {
     this.save();
 
     // Se il punteggio della domanda è tra 0.3 e 0.5 (livello L3) viene dato un suggerimento
-    if (result >= 0.3 && result < 0.5) {
+    if (result.score >= 0.3 && result.score < 0.5) {
       return {
         help: (await question.getHelp(_answer))?.replace('$', _answer) || 'Prova a dirmi di più',
-        score: result,
+        score: result.score,
+        intent: result.intent,
       };
     }
 
-    return { score: result };
+    return { score: result.score, intent: result.intent };
   }
 }
 

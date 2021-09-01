@@ -97,16 +97,18 @@ class Question {
 
   addDocuments() {
     this.documents?.forEach((doc) => {
-      const docProcessed = this.documentProcessor.process(doc);
+      doc.sentences.forEach((sentence) => {
+        const sentenceProcessed = this.documentProcessor.process(sentence);
 
-      this.nlp.addDocument('it', doc, 'corretto');
-      this.nlp.addDocument('it', docProcessed.join(' '), 'corretto');
+        this.nlp.addDocument('it', sentence, doc.intent);
+        this.nlp.addDocument('it', sentenceProcessed.join(' '), doc.intent);
 
-      if (docProcessed.length > 1) {
-        docProcessed.forEach((token) => {
-          this.nlp.addDocument('it', `${token}`, 'sbagliato');
-        });
-      }
+        if (sentenceProcessed.length > 1) {
+          sentenceProcessed.forEach((token) => {
+            this.nlp.addDocument('it', `${token}`, 'sbagliato');
+          });
+        }
+      });
     });
   }
 
@@ -115,8 +117,8 @@ class Question {
       help.trigger.forEach((trigger) => {
         this.helpNlp.addDocument('it', trigger, `help-${index}`);
       });
-      help.sentences.forEach((sentences) => {
-        this.helpNlp.addAnswer('it', `help-${index}`, sentences);
+      help.sentences.forEach((sentence) => {
+        this.helpNlp.addAnswer('it', `help-${index}`, sentence);
       });
     });
   }
@@ -134,14 +136,21 @@ class Question {
       }
     });
 
-    if (result.intent === 'corretto') {
+    console.log(result.classifications);
+    if (result.intent !== 'sbagliato') {
       const score = result.classifications[0]?.score;
       const num = score > 0.7 ? score * entityFactor : score;
-      return floorDecimal(num, 3);
+      return {
+        intent: result.classifications[0]?.intent,
+        score: floorDecimal(num, 3),
+      };
     }
     const score = result.classifications[1]?.score;
     const num = score > 0.7 ? score * entityFactor : score;
-    return floorDecimal(num, 3) || 0;
+    return {
+      intent: 'sbagliato',
+      score: floorDecimal(num, 3),
+    };
   }
 
   async getHelp(_answer) {
@@ -149,7 +158,7 @@ class Question {
     return result.answer ? result.answer : 'Dimmi di più';
   }
 
-  async addDocument(_document, level) {
+  async addDocument(_document, level, _intent) {
     let document = _document.trim();
 
     const _result = await this.nlp.process(document);
@@ -160,7 +169,8 @@ class Question {
     });
 
     if (level === 0) {
-      this.documents.push(document);
+      this.documents.find((doc) => doc.intent === _intent).sentences.push(document);
+      // this.documents.push(document);
     } else {
       if (!this.levels[`L${level}`]) this.levels[`L${level}`] = [];
       this.levels[`L${level}`].push(document);
