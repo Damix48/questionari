@@ -1,0 +1,2132 @@
+{
+  "settings": {
+    "languages": [
+      "it"
+    ],
+    "nlu": {
+      "log": false
+    },
+    "autoLoad": false,
+    "autoSave": false,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "modelFileName": "model.nlp",
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager",
+      "log": false
+    },
+    "locales": [
+      "it"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "it": {
+        "settings": {
+          "locale": "it",
+          "trainByDomain": false,
+          "tag": "domain-manager-it",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "@lavoro,alla,carriera,concentrarmi,cui,formazione,garantendo,l,maggior,mi,mia,organizzazione,per,piacerebbe,sfruttare,successo,sulla": {
+            "intent": "corretto",
+            "domain": "default"
+          },
+          "@lavoro,carriera,concentrarmi,formazione,garantendo,organizzazione,piacerebbe,sfruttare,successo": {
+            "intent": "corretto",
+            "domain": "default"
+          },
+          "piacerebbe": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "sfruttare": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "concentrarmi": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "formazione": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "garantendo": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "successo": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "carriera": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "organizzazione": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "@lavoro": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "@lavoro,che,cose,imparare,nel,nuove,potrebbero,servirmi,vorrei": {
+            "intent": "corretto",
+            "domain": "default"
+          },
+          "@lavoro,cose,imparare,nuove,potrebbero,servirmi,vorrei": {
+            "intent": "corretto",
+            "domain": "default"
+          },
+          "vorrei": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "imparare": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "cose": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "nuove": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "potrebbero": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "servirmi": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "@lavoro,apprendere,conoscenze,di,grado,in,la,mia,nuove,persona,risaltare,vorrei": {
+            "intent": "corretto",
+            "domain": "default"
+          },
+          "@lavoro,apprendere,conoscenze,grado,nuove,persona,risaltare,vorrei": {
+            "intent": "corretto",
+            "domain": "default"
+          },
+          "apprendere": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "conoscenze": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "grado": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "risaltare": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "persona": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "@lavoro,alla,concentrarmi,cui,formazione,garantendo,l,maggior,mi,mia,per,piacerebbe,sfruttare,successo,sulla": {
+            "intent": "corretto",
+            "domain": "default"
+          },
+          "@lavoro,concentrarmi,formazione,garantendo,piacerebbe,sfruttare,successo": {
+            "intent": "corretto",
+            "domain": "default"
+          },
+          "@lavoro,alla,concentrarmi,cui,formazione,garantendo,l,maggiori,mi,mia,per,piacerebbe,sfruttare,successi,sulla": {
+            "intent": "corretto",
+            "domain": "default"
+          },
+          "@lavoro,concentrarmi,formazione,garantendo,maggiori,piacerebbe,sfruttare,successi": {
+            "intent": "corretto",
+            "domain": "default"
+          },
+          "maggiori": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "successi": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "@lavoro,concentrarmi,formazione,garantendo,maggior,piacerebbe,sfruttare,successo": {
+            "intent": "corretto",
+            "domain": "default"
+          },
+          "@lavoro,a,ads,alla,and,are,by,concentrarmi,created,cui,developers,formazione,free,from,garantendo,get,intrusive,just,l,load,maggior,mi,mia,mixer,no,nonsense,online,or,per,piacerebbe,popups,random,randomly,rearranged,sfruttare,shuffled,shuffler,successo,sulla,them,there,word,words,your,–": {
+            "intent": "corretto",
+            "domain": "default"
+          },
+          "@lavoro,ads,and,are,by,concentrarmi,created,developers,formazione,free,from,garantendo,get,intrusive,just,load,mixer,nonsense,online,or,piacerebbe,popups,random,randomly,rearranged,sfruttare,shuffled,shuffler,successo,them,there,word,words,your,–": {
+            "intent": "corretto",
+            "domain": "default"
+          },
+          "load": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "there": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "mixer": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "just": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "nonsense": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "get": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "words": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "and": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "popups": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "–": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "intrusive": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "your": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "by": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "online": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "are": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "ads": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "randomly": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "from": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "rearranged": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "word": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "or": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "developers": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "free": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "shuffled": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "shuffler": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "created": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "them": {
+            "intent": "sbagliato",
+            "domain": "default"
+          },
+          "random": {
+            "intent": "sbagliato",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "corretto": "default",
+          "sbagliato": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Mi piacerebbe sfruttare per concentrarmi sulla mia formazione, garantendo maggior successo alla mia carriera per l'organizzazione per cui @lavoro.",
+            "intent": "corretto"
+          },
+          {
+            "domain": "default",
+            "utterance": "piacerebbe sfruttare concentrarmi formazione garantendo successo carriera organizzazione @lavoro",
+            "intent": "corretto"
+          },
+          {
+            "domain": "default",
+            "utterance": "piacerebbe",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "sfruttare",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "concentrarmi",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "formazione",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "garantendo",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "successo",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "carriera",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "organizzazione",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "vorrei imparare cose nuove che potrebbero servirmi nel @lavoro",
+            "intent": "corretto"
+          },
+          {
+            "domain": "default",
+            "utterance": "vorrei imparare cose nuove potrebbero servirmi @lavoro",
+            "intent": "corretto"
+          },
+          {
+            "domain": "default",
+            "utterance": "vorrei",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "imparare",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "cose",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "nuove",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "potrebbero",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "servirmi",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "vorrei apprendere nuove conoscenze in grado di risaltare la mia persona in @lavoro",
+            "intent": "corretto"
+          },
+          {
+            "domain": "default",
+            "utterance": "vorrei apprendere nuove conoscenze grado risaltare persona @lavoro",
+            "intent": "corretto"
+          },
+          {
+            "domain": "default",
+            "utterance": "vorrei",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "apprendere",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "nuove",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "conoscenze",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "grado",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "risaltare",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "persona",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "garantendo maggior successo alla mia @lavoro per l'@lavoro per cui @lavoro. Mi piacerebbe sfruttare per concentrarmi sulla mia formazione,",
+            "intent": "corretto"
+          },
+          {
+            "domain": "default",
+            "utterance": "garantendo successo @lavoro @lavoro @lavoro piacerebbe sfruttare concentrarmi formazione",
+            "intent": "corretto"
+          },
+          {
+            "domain": "default",
+            "utterance": "garantendo",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "successo",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "piacerebbe",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "sfruttare",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "concentrarmi",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "formazione",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "Mi piacerebbe sfruttare per concentrarmi sulla mia formazione, garantendo maggiori successi alla mia @lavoro per l'@lavoro per cui @lavoro.",
+            "intent": "corretto"
+          },
+          {
+            "domain": "default",
+            "utterance": "piacerebbe sfruttare concentrarmi formazione garantendo maggiori successi @lavoro @lavoro @lavoro",
+            "intent": "corretto"
+          },
+          {
+            "domain": "default",
+            "utterance": "piacerebbe",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "sfruttare",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "concentrarmi",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "formazione",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "garantendo",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "maggiori",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "successi",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "piacerebbe sfruttare concentrarmi formazione, garantendo maggior successo @lavoro @lavoro @lavoro.",
+            "intent": "corretto"
+          },
+          {
+            "domain": "default",
+            "utterance": "piacerebbe sfruttare concentrarmi formazione garantendo successo @lavoro @lavoro @lavoro",
+            "intent": "corretto"
+          },
+          {
+            "domain": "default",
+            "utterance": "piacerebbe",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "sfruttare",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "concentrarmi",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "formazione",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "garantendo",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "successo",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro maggior sulla successo per piacerebbe l'@lavoro Mi mia sfruttare per concentrarmi per garantendo formazione, mia alla cui @lavoro.",
+            "intent": "corretto"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro successo piacerebbe @lavoro sfruttare concentrarmi garantendo formazione @lavoro",
+            "intent": "corretto"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "successo",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "piacerebbe",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "sfruttare",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "concentrarmi",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "garantendo",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "formazione",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "garantendo load l'@lavoro @lavoro mia a There mixer. just nonsense, Mi get words. per and popups – piacerebbe intrusive alla cui per your no mia by sfruttare online formazione, are per ads, randomly get from rearranged. word words or Just words developers your @lavoro.\nFree successo shuffled concentrarmi maggior shuffler. Created them sulla random word Load",
+            "intent": "corretto"
+          },
+          {
+            "domain": "default",
+            "utterance": "garantendo load @lavoro @lavoro there mixer just nonsense get words and popups – piacerebbe intrusive your by sfruttare online formazione are ads randomly get from rearranged word words or just words developers your @lavoro free successo shuffled concentrarmi shuffler created them random word load",
+            "intent": "corretto"
+          },
+          {
+            "domain": "default",
+            "utterance": "garantendo",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "load",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "there",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "mixer",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "just",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "nonsense",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "get",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "words",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "and",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "popups",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "–",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "piacerebbe",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "intrusive",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "your",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "by",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "sfruttare",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "online",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "formazione",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "are",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "ads",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "randomly",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "get",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "from",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "rearranged",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "word",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "words",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "or",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "just",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "words",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "developers",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "your",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "@lavoro",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "free",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "successo",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "shuffled",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "concentrarmi",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "shuffler",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "created",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "them",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "random",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "word",
+            "intent": "sbagliato"
+          },
+          {
+            "domain": "default",
+            "utterance": "load",
+            "intent": "sbagliato"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "it",
+              "tag": "nlu-it",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "mi": 1,
+              "piacerebbe": 1,
+              "sfruttare": 1,
+              "per": 1,
+              "concentrarmi": 1,
+              "sulla": 1,
+              "mia": 1,
+              "formazione": 1,
+              "garantendo": 1,
+              "maggior": 1,
+              "successo": 1,
+              "alla": 1,
+              "carriera": 1,
+              "l": 1,
+              "organizzazione": 1,
+              "cui": 1,
+              "@lavoro": 1,
+              "vorrei": 1,
+              "imparare": 1,
+              "cose": 1,
+              "nuove": 1,
+              "che": 1,
+              "potrebbero": 1,
+              "servirmi": 1,
+              "nel": 1,
+              "apprendere": 1,
+              "conoscenze": 1,
+              "in": 1,
+              "grado": 1,
+              "di": 1,
+              "risaltare": 1,
+              "la": 1,
+              "persona": 1,
+              "maggiori": 1,
+              "successi": 1,
+              "load": 1,
+              "a": 1,
+              "there": 1,
+              "mixer": 1,
+              "just": 1,
+              "nonsense": 1,
+              "get": 1,
+              "words": 1,
+              "and": 1,
+              "popups": 1,
+              "–": 1,
+              "intrusive": 1,
+              "your": 1,
+              "no": 1,
+              "by": 1,
+              "online": 1,
+              "are": 1,
+              "ads": 1,
+              "randomly": 1,
+              "from": 1,
+              "rearranged": 1,
+              "word": 1,
+              "or": 1,
+              "developers": 1,
+              "free": 1,
+              "shuffled": 1,
+              "shuffler": 1,
+              "created": 1,
+              "them": 1,
+              "random": 1
+            },
+            "intents": {
+              "corretto": 1,
+              "sbagliato": 1
+            },
+            "intentFeatures": {
+              "corretto": {
+                "mi": 1,
+                "piacerebbe": 1,
+                "sfruttare": 1,
+                "per": 1,
+                "concentrarmi": 1,
+                "sulla": 1,
+                "mia": 1,
+                "formazione": 1,
+                "garantendo": 1,
+                "maggior": 1,
+                "successo": 1,
+                "alla": 1,
+                "carriera": 1,
+                "l": 1,
+                "organizzazione": 1,
+                "cui": 1,
+                "@lavoro": 1,
+                "vorrei": 1,
+                "imparare": 1,
+                "cose": 1,
+                "nuove": 1,
+                "che": 1,
+                "potrebbero": 1,
+                "servirmi": 1,
+                "nel": 1,
+                "apprendere": 1,
+                "conoscenze": 1,
+                "in": 1,
+                "grado": 1,
+                "di": 1,
+                "risaltare": 1,
+                "la": 1,
+                "persona": 1,
+                "maggiori": 1,
+                "successi": 1,
+                "load": 1,
+                "a": 1,
+                "there": 1,
+                "mixer": 1,
+                "just": 1,
+                "nonsense": 1,
+                "get": 1,
+                "words": 1,
+                "and": 1,
+                "popups": 1,
+                "–": 1,
+                "intrusive": 1,
+                "your": 1,
+                "no": 1,
+                "by": 1,
+                "online": 1,
+                "are": 1,
+                "ads": 1,
+                "randomly": 1,
+                "from": 1,
+                "rearranged": 1,
+                "word": 1,
+                "or": 1,
+                "developers": 1,
+                "free": 1,
+                "shuffled": 1,
+                "shuffler": 1,
+                "created": 1,
+                "them": 1,
+                "random": 1
+              },
+              "sbagliato": {
+                "piacerebbe": 1,
+                "sfruttare": 1,
+                "concentrarmi": 1,
+                "formazione": 1,
+                "garantendo": 1,
+                "successo": 1,
+                "carriera": 1,
+                "organizzazione": 1,
+                "@lavoro": 1,
+                "vorrei": 1,
+                "imparare": 1,
+                "cose": 1,
+                "nuove": 1,
+                "potrebbero": 1,
+                "servirmi": 1,
+                "apprendere": 1,
+                "conoscenze": 1,
+                "grado": 1,
+                "risaltare": 1,
+                "persona": 1,
+                "maggiori": 1,
+                "successi": 1,
+                "load": 1,
+                "there": 1,
+                "mixer": 1,
+                "just": 1,
+                "nonsense": 1,
+                "get": 1,
+                "words": 1,
+                "and": 1,
+                "popups": 1,
+                "–": 1,
+                "intrusive": 1,
+                "your": 1,
+                "by": 1,
+                "online": 1,
+                "are": 1,
+                "ads": 1,
+                "randomly": 1,
+                "from": 1,
+                "rearranged": 1,
+                "word": 1,
+                "or": 1,
+                "developers": 1,
+                "free": 1,
+                "shuffled": 1,
+                "shuffler": 1,
+                "created": 1,
+                "them": 1,
+                "random": 1
+              }
+            },
+            "featuresToIntent": {
+              "mi": [
+                "corretto"
+              ],
+              "piacerebbe": [
+                "corretto",
+                "sbagliato"
+              ],
+              "sfruttare": [
+                "corretto",
+                "sbagliato"
+              ],
+              "per": [
+                "corretto"
+              ],
+              "concentrarmi": [
+                "corretto",
+                "sbagliato"
+              ],
+              "sulla": [
+                "corretto"
+              ],
+              "mia": [
+                "corretto"
+              ],
+              "formazione": [
+                "corretto",
+                "sbagliato"
+              ],
+              "garantendo": [
+                "corretto",
+                "sbagliato"
+              ],
+              "maggior": [
+                "corretto"
+              ],
+              "successo": [
+                "corretto",
+                "sbagliato"
+              ],
+              "alla": [
+                "corretto"
+              ],
+              "carriera": [
+                "corretto",
+                "sbagliato"
+              ],
+              "l": [
+                "corretto"
+              ],
+              "organizzazione": [
+                "corretto",
+                "sbagliato"
+              ],
+              "cui": [
+                "corretto"
+              ],
+              "@lavoro": [
+                "corretto",
+                "sbagliato"
+              ],
+              "vorrei": [
+                "corretto",
+                "sbagliato"
+              ],
+              "imparare": [
+                "corretto",
+                "sbagliato"
+              ],
+              "cose": [
+                "corretto",
+                "sbagliato"
+              ],
+              "nuove": [
+                "corretto",
+                "sbagliato"
+              ],
+              "che": [
+                "corretto"
+              ],
+              "potrebbero": [
+                "corretto",
+                "sbagliato"
+              ],
+              "servirmi": [
+                "corretto",
+                "sbagliato"
+              ],
+              "nel": [
+                "corretto"
+              ],
+              "apprendere": [
+                "corretto",
+                "sbagliato"
+              ],
+              "conoscenze": [
+                "corretto",
+                "sbagliato"
+              ],
+              "in": [
+                "corretto"
+              ],
+              "grado": [
+                "corretto",
+                "sbagliato"
+              ],
+              "di": [
+                "corretto"
+              ],
+              "risaltare": [
+                "corretto",
+                "sbagliato"
+              ],
+              "la": [
+                "corretto"
+              ],
+              "persona": [
+                "corretto",
+                "sbagliato"
+              ],
+              "maggiori": [
+                "corretto",
+                "sbagliato"
+              ],
+              "successi": [
+                "corretto",
+                "sbagliato"
+              ],
+              "load": [
+                "corretto",
+                "sbagliato"
+              ],
+              "a": [
+                "corretto"
+              ],
+              "there": [
+                "corretto",
+                "sbagliato"
+              ],
+              "mixer": [
+                "corretto",
+                "sbagliato"
+              ],
+              "just": [
+                "corretto",
+                "sbagliato"
+              ],
+              "nonsense": [
+                "corretto",
+                "sbagliato"
+              ],
+              "get": [
+                "corretto",
+                "sbagliato"
+              ],
+              "words": [
+                "corretto",
+                "sbagliato"
+              ],
+              "and": [
+                "corretto",
+                "sbagliato"
+              ],
+              "popups": [
+                "corretto",
+                "sbagliato"
+              ],
+              "–": [
+                "corretto",
+                "sbagliato"
+              ],
+              "intrusive": [
+                "corretto",
+                "sbagliato"
+              ],
+              "your": [
+                "corretto",
+                "sbagliato"
+              ],
+              "no": [
+                "corretto"
+              ],
+              "by": [
+                "corretto",
+                "sbagliato"
+              ],
+              "online": [
+                "corretto",
+                "sbagliato"
+              ],
+              "are": [
+                "corretto",
+                "sbagliato"
+              ],
+              "ads": [
+                "corretto",
+                "sbagliato"
+              ],
+              "randomly": [
+                "corretto",
+                "sbagliato"
+              ],
+              "from": [
+                "corretto",
+                "sbagliato"
+              ],
+              "rearranged": [
+                "corretto",
+                "sbagliato"
+              ],
+              "word": [
+                "corretto",
+                "sbagliato"
+              ],
+              "or": [
+                "corretto",
+                "sbagliato"
+              ],
+              "developers": [
+                "corretto",
+                "sbagliato"
+              ],
+              "free": [
+                "corretto",
+                "sbagliato"
+              ],
+              "shuffled": [
+                "corretto",
+                "sbagliato"
+              ],
+              "shuffler": [
+                "corretto",
+                "sbagliato"
+              ],
+              "created": [
+                "corretto",
+                "sbagliato"
+              ],
+              "them": [
+                "corretto",
+                "sbagliato"
+              ],
+              "random": [
+                "corretto",
+                "sbagliato"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "it",
+                "tag": "nlu-it",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true
+              },
+              "features": [
+                "mi",
+                "piacerebbe",
+                "sfruttare",
+                "per",
+                "concentrarmi",
+                "sulla",
+                "mia",
+                "formazione",
+                "garantendo",
+                "maggior",
+                "successo",
+                "alla",
+                "carriera",
+                "l",
+                "organizzazione",
+                "cui",
+                "@lavoro",
+                "vorrei",
+                "imparare",
+                "cose",
+                "nuove",
+                "che",
+                "potrebbero",
+                "servirmi",
+                "nel",
+                "apprendere",
+                "conoscenze",
+                "in",
+                "grado",
+                "di",
+                "risaltare",
+                "la",
+                "persona",
+                "maggiori",
+                "successi",
+                "load",
+                "a",
+                "there",
+                "mixer",
+                "just",
+                "nonsense",
+                "get",
+                "words",
+                "and",
+                "popups",
+                "–",
+                "intrusive",
+                "your",
+                "no",
+                "by",
+                "online",
+                "are",
+                "ads",
+                "randomly",
+                "from",
+                "rearranged",
+                "word",
+                "or",
+                "developers",
+                "free",
+                "shuffled",
+                "shuffler",
+                "created",
+                "them",
+                "random"
+              ],
+              "intents": [
+                "corretto",
+                "sbagliato"
+              ],
+              "perceptrons": [
+                [
+                  -0.0000636744371149689,
+                  2.463263988494873,
+                  2.4756743907928467,
+                  -0.0000636744371149689,
+                  2.487654447555542,
+                  -0.0000636744371149689,
+                  0.00046403787564486265,
+                  2.4956209659576416,
+                  2.4730145931243896,
+                  -0.00020484341075643897,
+                  1.890425682067871,
+                  -0.0000636744371149689,
+                  -0.0016887640813365579,
+                  -0.0000636744371149689,
+                  0.001764743821695447,
+                  -0.0000636744371149689,
+                  2.8082408905029297,
+                  2.810969829559326,
+                  2.14261794090271,
+                  2.15065598487854,
+                  2.811357021331787,
+                  0.025349192321300507,
+                  2.168929100036621,
+                  2.1759324073791504,
+                  0.025349192321300507,
+                  1.7130351066589355,
+                  1.729947805404663,
+                  0.0006170079577714205,
+                  1.735003113746643,
+                  0.0006170079577714205,
+                  1.7398467063903809,
+                  0.0006170079577714205,
+                  1.7444864511489868,
+                  0.9451340436935425,
+                  0.9451340436935425,
+                  -6.610105742765882e-7,
+                  0.00008978345431387424,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  0.00008978345431387424,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -6.610105742765882e-7,
+                  -2.8081892101661095
+                ],
+                [
+                  -0.9005140662193298,
+                  -2.3317553997039795,
+                  -2.334533214569092,
+                  -0.9005140662193298,
+                  -2.328239679336548,
+                  -0.9005140662193298,
+                  -1.8402557373046875,
+                  -2.344047784805298,
+                  -2.350233554840088,
+                  -1.2702898979187012,
+                  -2.3473639488220215,
+                  -0.9005140662193298,
+                  -1.9621050357818604,
+                  -0.9005140662193298,
+                  -1.948049545288086,
+                  -0.9005140662193298,
+                  -2.268794536590576,
+                  -2.238805055618286,
+                  -2.339509963989258,
+                  -2.3528616428375244,
+                  -2.252046585083008,
+                  -1.201795220375061,
+                  -2.3771603107452393,
+                  -2.3913235664367676,
+                  -1.201795220375061,
+                  -2.073287010192871,
+                  -2.0790374279022217,
+                  -0.6184637546539307,
+                  -2.0767738819122314,
+                  -0.6184637546539307,
+                  -2.0747058391571045,
+                  -0.6184637546539307,
+                  -2.0728325843811035,
+                  -2.1277921199798584,
+                  -2.1215786933898926,
+                  -2.1327319145202637,
+                  0,
+                  -2.152454376220703,
+                  -2.1427345275878906,
+                  -2.150377035140991,
+                  -2.1245710849761963,
+                  -2.1634061336517334,
+                  -2.151399612426758,
+                  -2.1005523204803467,
+                  -2.089608669281006,
+                  -2.078448534011841,
+                  -2.0758237838745117,
+                  -2.120675802230835,
+                  0,
+                  -2.056856393814087,
+                  -2.0548102855682373,
+                  -2.0535128116607666,
+                  -2.0417797565460205,
+                  -2.029862642288208,
+                  -2.0154857635498047,
+                  -2.0031392574310303,
+                  -2.073559284210205,
+                  -1.9816795587539673,
+                  -1.9672038555145264,
+                  -1.96109938621521,
+                  -1.9623621702194214,
+                  -1.9626842737197876,
+                  -1.9497871398925781,
+                  -1.936758279800415,
+                  -1.923604965209961,
+                  16.400851366726226
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "it",
+        "Mi piacerebbe sfruttare per concentrarmi sulla mia formazione, garantendo maggior successo alla mia carriera per l'organizzazione per cui @lavoro."
+      ],
+      [
+        "it",
+        "piacerebbe sfruttare concentrarmi formazione garantendo successo carriera organizzazione @lavoro"
+      ],
+      [
+        "it",
+        "piacerebbe"
+      ],
+      [
+        "it",
+        "sfruttare"
+      ],
+      [
+        "it",
+        "concentrarmi"
+      ],
+      [
+        "it",
+        "formazione"
+      ],
+      [
+        "it",
+        "garantendo"
+      ],
+      [
+        "it",
+        "successo"
+      ],
+      [
+        "it",
+        "carriera"
+      ],
+      [
+        "it",
+        "organizzazione"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "vorrei imparare cose nuove che potrebbero servirmi nel @lavoro"
+      ],
+      [
+        "it",
+        "vorrei imparare cose nuove potrebbero servirmi @lavoro"
+      ],
+      [
+        "it",
+        "vorrei"
+      ],
+      [
+        "it",
+        "imparare"
+      ],
+      [
+        "it",
+        "cose"
+      ],
+      [
+        "it",
+        "nuove"
+      ],
+      [
+        "it",
+        "potrebbero"
+      ],
+      [
+        "it",
+        "servirmi"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "vorrei apprendere nuove conoscenze in grado di risaltare la mia persona in @lavoro"
+      ],
+      [
+        "it",
+        "vorrei apprendere nuove conoscenze grado risaltare persona @lavoro"
+      ],
+      [
+        "it",
+        "vorrei"
+      ],
+      [
+        "it",
+        "apprendere"
+      ],
+      [
+        "it",
+        "nuove"
+      ],
+      [
+        "it",
+        "conoscenze"
+      ],
+      [
+        "it",
+        "grado"
+      ],
+      [
+        "it",
+        "risaltare"
+      ],
+      [
+        "it",
+        "persona"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "garantendo maggior successo alla mia @lavoro per l'@lavoro per cui @lavoro. Mi piacerebbe sfruttare per concentrarmi sulla mia formazione,"
+      ],
+      [
+        "it",
+        "garantendo successo @lavoro @lavoro @lavoro piacerebbe sfruttare concentrarmi formazione"
+      ],
+      [
+        "it",
+        "garantendo"
+      ],
+      [
+        "it",
+        "successo"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "piacerebbe"
+      ],
+      [
+        "it",
+        "sfruttare"
+      ],
+      [
+        "it",
+        "concentrarmi"
+      ],
+      [
+        "it",
+        "formazione"
+      ],
+      [
+        "it",
+        "Mi piacerebbe sfruttare per concentrarmi sulla mia formazione, garantendo maggiori successi alla mia @lavoro per l'@lavoro per cui @lavoro."
+      ],
+      [
+        "it",
+        "piacerebbe sfruttare concentrarmi formazione garantendo maggiori successi @lavoro @lavoro @lavoro"
+      ],
+      [
+        "it",
+        "piacerebbe"
+      ],
+      [
+        "it",
+        "sfruttare"
+      ],
+      [
+        "it",
+        "concentrarmi"
+      ],
+      [
+        "it",
+        "formazione"
+      ],
+      [
+        "it",
+        "garantendo"
+      ],
+      [
+        "it",
+        "maggiori"
+      ],
+      [
+        "it",
+        "successi"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "piacerebbe sfruttare concentrarmi formazione, garantendo maggior successo @lavoro @lavoro @lavoro."
+      ],
+      [
+        "it",
+        "piacerebbe sfruttare concentrarmi formazione garantendo successo @lavoro @lavoro @lavoro"
+      ],
+      [
+        "it",
+        "piacerebbe"
+      ],
+      [
+        "it",
+        "sfruttare"
+      ],
+      [
+        "it",
+        "concentrarmi"
+      ],
+      [
+        "it",
+        "formazione"
+      ],
+      [
+        "it",
+        "garantendo"
+      ],
+      [
+        "it",
+        "successo"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "@lavoro maggior sulla successo per piacerebbe l'@lavoro Mi mia sfruttare per concentrarmi per garantendo formazione, mia alla cui @lavoro."
+      ],
+      [
+        "it",
+        "@lavoro successo piacerebbe @lavoro sfruttare concentrarmi garantendo formazione @lavoro"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "successo"
+      ],
+      [
+        "it",
+        "piacerebbe"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "sfruttare"
+      ],
+      [
+        "it",
+        "concentrarmi"
+      ],
+      [
+        "it",
+        "garantendo"
+      ],
+      [
+        "it",
+        "formazione"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "garantendo load l'@lavoro @lavoro mia a There mixer. just nonsense, Mi get words. per and popups – piacerebbe intrusive alla cui per your no mia by sfruttare online formazione, are per ads, randomly get from rearranged. word words or Just words developers your @lavoro.\nFree successo shuffled concentrarmi maggior shuffler. Created them sulla random word Load"
+      ],
+      [
+        "it",
+        "garantendo load @lavoro @lavoro there mixer just nonsense get words and popups – piacerebbe intrusive your by sfruttare online formazione are ads randomly get from rearranged word words or just words developers your @lavoro free successo shuffled concentrarmi shuffler created them random word load"
+      ],
+      [
+        "it",
+        "garantendo"
+      ],
+      [
+        "it",
+        "load"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "there"
+      ],
+      [
+        "it",
+        "mixer"
+      ],
+      [
+        "it",
+        "just"
+      ],
+      [
+        "it",
+        "nonsense"
+      ],
+      [
+        "it",
+        "get"
+      ],
+      [
+        "it",
+        "words"
+      ],
+      [
+        "it",
+        "and"
+      ],
+      [
+        "it",
+        "popups"
+      ],
+      [
+        "it",
+        "–"
+      ],
+      [
+        "it",
+        "piacerebbe"
+      ],
+      [
+        "it",
+        "intrusive"
+      ],
+      [
+        "it",
+        "your"
+      ],
+      [
+        "it",
+        "by"
+      ],
+      [
+        "it",
+        "sfruttare"
+      ],
+      [
+        "it",
+        "online"
+      ],
+      [
+        "it",
+        "formazione"
+      ],
+      [
+        "it",
+        "are"
+      ],
+      [
+        "it",
+        "ads"
+      ],
+      [
+        "it",
+        "randomly"
+      ],
+      [
+        "it",
+        "get"
+      ],
+      [
+        "it",
+        "from"
+      ],
+      [
+        "it",
+        "rearranged"
+      ],
+      [
+        "it",
+        "word"
+      ],
+      [
+        "it",
+        "words"
+      ],
+      [
+        "it",
+        "or"
+      ],
+      [
+        "it",
+        "just"
+      ],
+      [
+        "it",
+        "words"
+      ],
+      [
+        "it",
+        "developers"
+      ],
+      [
+        "it",
+        "your"
+      ],
+      [
+        "it",
+        "@lavoro"
+      ],
+      [
+        "it",
+        "free"
+      ],
+      [
+        "it",
+        "successo"
+      ],
+      [
+        "it",
+        "shuffled"
+      ],
+      [
+        "it",
+        "concentrarmi"
+      ],
+      [
+        "it",
+        "shuffler"
+      ],
+      [
+        "it",
+        "created"
+      ],
+      [
+        "it",
+        "them"
+      ],
+      [
+        "it",
+        "random"
+      ],
+      [
+        "it",
+        "word"
+      ],
+      [
+        "it",
+        "load"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner"
+    },
+    "rules": {
+      "it": {
+        "lavoro": {
+          "name": "lavoro",
+          "type": "enum",
+          "rules": [
+            {
+              "option": [
+                "lavoro",
+                "vita lavorativa",
+                "lavorativa",
+                "azienda",
+                "organizzazione",
+                "carriera"
+              ],
+              "texts": [
+                "lavoro",
+                "vita lavorativa",
+                "lavorativa",
+                "azienda",
+                "organizzazione",
+                "carriera"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {}
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {
+    "corretto": {
+      "lavoro": {
+        "intent": "corretto",
+        "entity": "lavoro",
+        "mandatory": false,
+        "locales": {}
+      }
+    },
+    "sbagliato": {
+      "lavoro": {
+        "intent": "sbagliato",
+        "entity": "lavoro",
+        "mandatory": false,
+        "locales": {}
+      }
+    }
+  }
+}

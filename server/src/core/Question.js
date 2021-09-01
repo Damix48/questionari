@@ -1,4 +1,5 @@
 const { Nlp } = require('@nlpjs/basic');
+const fs = require('fs');
 const { DocumentProcessor, floorDecimal } = require('./utils');
 
 class Question {
@@ -57,6 +58,8 @@ class Question {
     this.initNLP();
     this.createDataset();
     await this.nlp.train();
+    fs.writeFileSync(`${__dirname}/ciao.json`, this.nlp.export());
+
     await this.helpNlp.train();
   }
 
