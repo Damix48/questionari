@@ -1,5 +1,13 @@
 # Questionari
 
+## nlp.js vs BM25
+
+Ho scelto di utilizzare la libreria nlp.js piuttosto che BM25 perchè nell'ambito del riconoscimento e valutazione di risposte aperte sembra essere migliore.
+
+Il problema principale di BM25 era che non era in grado di valutare molto bene solo due categorie come `corretto` e `sbagliato`: sarebbe bastata una risposta contente anche solo una keyword per dare corretta la risposta.
+
+Con nlp.js invece è necessario che la risposta abbia più keyword corrette ed è comunque possibile categorizzare le risposte in più categoria proprio come BM25.
+
 ## Installazione
 1. Scaricare la repository.
 2. Spostarsi nella cartella `client`
