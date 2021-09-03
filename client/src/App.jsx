@@ -148,7 +148,12 @@ const App = () => {
     const response = await postAnswer(id, question.question, answer);
     console.log(response);
 
-    question.updateScore(response.score);
+    if (response.intent.includes('corretto')) {
+      question.updateScore(response.score);
+    } else {
+      question.updateScore(0);
+    }
+
     if (response.help && question.next !== 0) {
       question.addHelp(response.help);
       question.next -= 1;
