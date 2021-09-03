@@ -18,7 +18,7 @@ Il server legge i dati dal file `quesitons.json` presente nella cartella `server
   "documents": 
   [{
     "intent": "nome_corretto",
-    "sentences":[
+    "sentences": [
       "array di frasi",
       "corrispondenti alla categoria nome",
       "se aggiunto _corretto si indica che la",
