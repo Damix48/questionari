@@ -19,18 +19,10 @@ class _QuestionController {
     // Vengono controllate le risposte e potenzialmente aggiornati i livelli e i documents
     this.questions.forEach((question) => {
       const response = question.check();
+
       console.log(chalk.blue(`Domanda: '${question.question}'`));
       if (response.quality) {
         console.log(chalk.red(`\tLa percentuale di risposte corrette è bassa (${(response.quality * 100).toFixed(2)}%).`));
-      }
-      if (response.update1) {
-        console.log(chalk.red(`\tLa frase ${response.update1} è stata spostata nei documenti (dal livello 1).`));
-      }
-      if (response.update2) {
-        console.log(chalk.red(`\tLa frase ${response.update2} è stata spostata nel livello 1 (dal livello 2).`));
-      }
-      if (response.update3) {
-        console.log(chalk.red(`\tLa frase ${response.update3} è stata spostata nei livello 2 (dal livello 3).`));
       }
       console.log(chalk.blueBright('  Controllo completato\n'));
     });

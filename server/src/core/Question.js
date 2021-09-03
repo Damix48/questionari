@@ -10,7 +10,7 @@ class Question {
     this.question = _question.question;
     this.documents = _question.documents;
     this.entities = _question.entities || [];
-    this.levels = _question.levels || {};
+    this.savedData = _question.savedData || {};
     this.stats = _question.stats || { total: 0, correct: 0, incorrect: 0 };
     this.help = _question.help || null;
 
@@ -46,14 +46,13 @@ class Question {
       question: this.question,
       documents: this.documents,
       entities: this.entities,
-      levels: this.levels,
+      savedData: this.savedData,
       stats: this.stats,
       help: this.help,
     };
   }
 
   async train() {
-    this.check();
     this.initNLP();
     this.createDataset();
     await this.nlp.train();
@@ -61,24 +60,36 @@ class Question {
   }
 
   check() {
-    const response = {};
+    const response = [];
     if (this.stats.quality < 0.5) {
       response.quality = this.stats.quality;
     }
 
-    response.update1 = this.update(this.levels.L1, this.documents);
-    response.update2 = this.update(this.levels.L2, this.levels.L1);
-    response.update3 = this.update(this.levels.L3, this.levels.L2);
+    this.documents.forEach((doc, index) => {
+      response[index] = {};
+      response[index].update1 = this.update(
+        this.savedData[doc.intent]?.L1,
+        this.documents.find((d) => d.intent === doc.intent).sentences,
+      );
+      response[index].update2 = this.update(
+        this.savedData[doc.intent]?.L2,
+        this.savedData[doc.intent]?.L1,
+      );
+      response[index].update3 = this.update(
+        this.savedData[doc.intent]?.L3,
+        this.savedData[doc.intent]?.L2,
+      );
+    });
 
     return response;
   }
 
   // eslint-disable-next-line class-methods-use-this
   update(from, to) {
-    if (from?.length > 3 * to?.length && to?.length > 2) {
+    if ((from?.length > (3 * to?.length)) && to?.length > 2) {
       const update = from.splice(Math.floor(Math.random() * from.length), 1);
-      to.push(update);
-      return `${update}`;
+      to.push(...update);
+      return `${update[0]}`;
     }
     return null;
   }
@@ -149,7 +160,7 @@ class Question {
     const num = score > 0.7 ? score * entityFactor : score;
     return {
       intent: 'sbagliato',
-      score: floorDecimal(num, 3),
+      score: floorDecimal(num, 3) || 0,
     };
   }
 
@@ -170,10 +181,10 @@ class Question {
 
     if (level === 0) {
       this.documents.find((doc) => doc.intent === _intent).sentences.push(document);
-      // this.documents.push(document);
     } else {
-      if (!this.levels[`L${level}`]) this.levels[`L${level}`] = [];
-      this.levels[`L${level}`].push(document);
+      if (!this.savedData[_intent]) this.savedData[_intent] = {};
+      if (!this.savedData[_intent][`L${level}`]) this.savedData[_intent][`L${level}`] = [];
+      this.savedData[_intent][`L${level}`].push(document);
     }
   }
 
