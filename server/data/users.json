@@ -1,23 +1,8 @@
 [
   {
-    "id": "ZhSp02xydETNman-Sgat9",
-    "name": "Mario",
-    "surname": "Rossi",
-    "questions": [
-      {
-        "question": "Se avessi dei mesi senza obblighi o vincoli finanziari, cosa faresti con il tempo a disposizione?",
-        "answer": "",
-        "result": {
-          "score": 0
-        }
-      },
-      {
-        "question": "Parlami di quando hai dovuto gestire piu responsabilita. Come hai organizzato il lavoro da svolgere?",
-        "answer": "ho creato una lista di cose da completare durante la giornata.",
-        "result": {
-          "score": 0.846
-        }
-      }
-    ]
+    "id": "test",
+    "name": "Test",
+    "surname": "Test",
+    "questions": []
   }
 ]
