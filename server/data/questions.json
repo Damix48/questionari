@@ -7,13 +7,14 @@
         "sentences": [
           "Mi piacerebbe sfruttare per concentrarmi sulla mia formazione, garantendo maggior successo alla mia carriera per l'organizzazione per cui @lavoro.",
           "vorrei imparare cose nuove che potrebbero servirmi nel @lavoro",
-          "vorrei apprendere nuove conoscenze in grado di risaltare la mia persona in @lavoro"
+          "vorrei apprendere nuove conoscenze in grado di risaltare la mia persona in @lavoro",
+          "mi piacerebbe studiare per imparare cose nuove per il mio @lavoro"
         ]
       },
       {
         "intent": "vacanza",
         "sentences": [
-          "vorrei andare alle maldive",
+          "vorrei andare alle maldive per qualche mese",
           "mi piacerebbe andare in vacanza al mare",
           "vorrei rilassarmi andando in montagna o al mare",
           "sarebbe bello sentire l'aria della montagna per qualche settimana",
@@ -42,7 +43,22 @@
         ]
       }
     ],
-    "levels": {},
+    "savedData": {
+      "lavoro": {
+        "L1": [
+          "mi piacerebbe andare alle maldive per imparare cose nuove utili il mio futuro lavorativo",
+          "mi piacerebbe andare a milano per imparare a ballare"
+        ],
+        "L2": [
+          "maldive @lavoro futuro @lavoro vacanza mare montagna discoteca giapponese cinema"
+        ]
+      },
+      "vacanza": {
+        "L3": [
+          "andare al mare tutti i giorni"
+        ]
+      }
+    },
     "stats": {
       "total": 0,
       "correct": 0,
@@ -88,7 +104,7 @@
       }
     ],
     "entities": [],
-    "levels": {},
+    "savedData": {},
     "stats": {
       "total": 0,
       "correct": 0,
@@ -109,7 +125,7 @@
       }
     ],
     "entities": [],
-    "levels": {},
+    "savedData": {},
     "stats": {
       "total": 0,
       "correct": 0,
