@@ -15,16 +15,27 @@ Il server legge i dati dal file `quesitons.json` presente nella cartella `server
 ```json
 {
   "question": "Domanda da porre all'utente",
-  "documents": ["array di frasi considerate @corretto", "che servono per il riconoscimento delle nuove"],
+  "documents": 
+  [{
+    "intent": "nome_corretto",
+    "sentences":[
+      "array di frasi",
+      "corrispondenti alla categoria nome",
+      "se aggiunto _corretto si indica che la",
+      "categoria è da considerare corretta"
+    ]
+  }],
   "entities": [{
     "name": "corretto",
     "data": ["corrette", "tutte giuste"],
     "weight": 0.25
   }],
   "levels": {
-    "L1": ["array di frasi che", "hanno ottenuto un punteggio", "tra 0.9 e 0.75"],
-    "L2": ["array di frasi che", "hanno ottenuto un punteggio", "tra 0.75 e 0.5"],
-    "L3": ["array di frasi che", "hanno ottenuto un punteggio", "tra 0.5 e 0.3"],
+    "nome": {
+      "L1": ["array di frasi che", "hanno ottenuto un punteggio", "tra 0.9 e 0.75"],
+      "L2": ["array di frasi che", "hanno ottenuto un punteggio", "tra 0.75 e 0.5"],
+      "L3": ["array di frasi che", "hanno ottenuto un punteggio", "tra 0.5 e 0.3"],
+    }
   },
   "stats": {
     "total": 17,
@@ -34,12 +45,14 @@ Il server legge i dati dal file `quesitons.json` presente nella cartella `server
   },
   "help": [{
     "trigger": ["array di frasi", "o parole"],
-    "sentence": ["array di risposte triggerate", "da trigger"]
+    "sentences": ["array di risposte triggerate", "da trigger"]
   }]
 }
 ```
 - `question`: domanda da porre all'utente [Obbligatorio]
-- `documents`: array che contiente le frasi considerate corrette. Queste frasi verranno utilizzate per il riconoscimento delle nuove risposte [Obbligatorio]
+- `documents`: array che contiente oggetti document con la seguente struttura: [Obbligatorio]
+  - `intent`: nome della categoria del documento (aggiuntere `_corretto` dopo in nome se la categoria è da considerare corretta)
+  - `sentences`: array che contiene le frasi da utilizzare per allenare al rete
 - `entities`: array che contiene le entità che verranno ricercate all'interno delle risposte per ottenere un riconoscimento più preciso. Le entità sono composte con la seguente struttura:
   - `name`: nome dell'entità che verrà sostituita con `@name` all'interno delle frasi salvate
   - `data`: array che contiene le parole riconosciute come entità
@@ -55,7 +68,7 @@ Il server legge i dati dal file `quesitons.json` presente nella cartella `server
   - `quality`: percentuale di risposte corrette
 - `help`: array che contiene le frasi di aiuto che verranno utilizzate se la domanda ottiene un punteggio tra 0.5 e 0.3
   - `trigger`: array di frasi o parole che vengono utilizzate per innescare un help
-  - `sentence`: array di aiuti che verranno pescati casualmente
+  - `sentences`: array di aiuti che verranno pescati casualmente
 
 Per aggiungere una nuova domanda da utilizzare sono obbligatorie le proprietà `question` e `documents`.
 
@@ -87,11 +100,13 @@ Il server analizza la risposta, la salva sul file `server/data/users.json` e rit
 ```json
 {
   "score": 0.4,
-  "help": "Prova a dirmi di più"
+  "help": "Prova a dirmi di più",
+  "intent": "lavoro_corretto"
 }
 ```
 - `score`: punteggio che la risposta ottiene
 - `help`: aiuto (opzionale) che il server invia per aiutare nella risposta se il punteggio è tra 0.3 e 0.5
+- `intent`: categoria della risposta
 
 #### POST `/api/user/add`
 Serve per aggiungere un utente alla lista degli utenti che rispondono alle domande.
@@ -123,4 +138,3 @@ Viene poi effettuta la vera analisi della risposta tramite la funzione `nlp.proc
 Se una risposta data dall'utente viene valutata molto positivamente viene inserita direttamente come nuova frase in `documents`, altrimenti viene salvata in vari livelli su `levels`. Una frase può salire di livello o passare nei documents solo se nel livello ci sono 3 volte più frasi che nel livello successivo.
 
 `documents` può essere aggioranta anche manualmente.
-
